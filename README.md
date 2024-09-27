@@ -14,4 +14,4 @@
 라이브러리 다운로드 할 때
 - pip install flask --no-user
 
-https://wikidocs.net/81058#_1 3-07 로그인과 로그아웃 까지 진행함
+[https://wikidocs.net/81058#_1 ] 3-08 로그인과 로그아웃 까지 진행함
