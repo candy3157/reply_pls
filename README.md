@@ -12,6 +12,6 @@
 
 
 라이브러리 다운로드 할 때
-- pip install flask --no-user
+- pip install 라이브러리 명 --no-user
 
-[https://wikidocs.net/81058#_1 ] 3-10 게시물 수정 & 삭제 까지 복구 完
+[https://wikidocs.net/81058#_1 ] 3-13 마크다운은 안되서 마크다운 건너뛰고 3-14검색 할 차례
