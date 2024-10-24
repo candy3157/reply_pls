@@ -11,7 +11,7 @@ from pybo.models import User
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 
-@bp.route('/signup', methods=('GET', 'POST'))
+@bp.route('/signup/', methods=('GET', 'POST'))
 def signup():
   form = UserCreateForm()
   if request.method == 'POST' and form.validate_on_submit():
@@ -50,12 +50,6 @@ def login():
   return render_template('auth/login.html', form=form)
 
 
-@bp.route('/logout/')
-def logout():
-  session.clear()
-  return redirect(url_for('main.index'))
-
-
 @bp.before_app_request
 def load_logged_in_user():
   user_id = session.get('user_id')
@@ -63,6 +57,12 @@ def load_logged_in_user():
     g.user = None
   else:
     g.user = User.query.get(user_id)
+
+
+@bp.route('/logout/')
+def logout():
+  session.clear()
+  return redirect(url_for('main.index'))
 
 
 def login_required(view):
